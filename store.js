@@ -1,3 +1,5 @@
+
+
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
 } else {
@@ -29,7 +31,7 @@ function ready() {
 function purchaseClicked() {
 	var name=window.prompt("Enter your name");
 	var table=window.prompt("enter your table number");
-	swal("order on the way!" , "pay in cash!" , "success");
+	swal(name +"'s order on the way!" , " Kindly pay in cash!" , "success");
     var cartItems = document.getElementsByClassName('cart-items')[0]
     while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild)

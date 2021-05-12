@@ -5,61 +5,48 @@
   text-decoration: none;
   box-sizing: border-box;
 }
-.navbar{
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-   "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  position:fixed;
-  background-color: green ;
+.navbar {
   width: 100%;
-  padding: 12px 16px;
-  top: 0;
-  font-size: 32px
-  z-index: 100;
-  transition: .3s linear;
-  line-height: 50px
-  cursor: pointer;
-}
-.inner-width{
-  max-width: 1300px;
-  margin: auto;
-}
-.navbar .inner-width{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.sticky{
-  background-color: #fff;
-  padding: 10px 0;
-}
-.sticky .navbar-menu a{
-  color:  rgb(33, 0, 109);
+  background-color: #555;
+  overflow: auto;
 }
 
-.navbar-menu .link{
-  color:  rgb(33, 0, 109);
-  font-size: 13px;
-  font-weight: 900;
-  font-family: 'Raleway',sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  line-height: 20px;
-  margin-left: 35px;
-  display: inline-block;
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
 }
-.navbar-menu .link::after{
-  content: '';
-  display: block;
-  width: 0;
-  height: 1.8px;
-  background-color: red;
-  transition: width .3s;
+.content {
+  padding: 16px;
 }
-.navbar-menu .link:hover::after{
+
+.sticky {
+  position: fixed;
+  top: 0;
   width: 100%;
-  background-color: rgb(81, 44, 148);
-  color: white
 }
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: #000;
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: #04AA6D;
+}
+
+
+
 #home{
   height: 100vh;
   background-image: url(bg.jpg);
